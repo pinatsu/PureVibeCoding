@@ -2,11 +2,35 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![纯血 vibe coding](badges/pure-vibe-coding.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.md)
 
 一个给开源项目使用的 provenance 徽章：声明该项目是 **100% 通过和 agent 对话生成** 的，没有“古法手工编程”，也没有人类偷偷手改 AI 产物来收拾残局。
 
 这个项目不是代码质量、安全性或许可证合规认证。它只认证一件事：项目的生产过程是否足够“纯血 vibe coding”，并且是否公开了可审计的 agent 对话记录。
+
+## 徽章展示
+
+完整认证：
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-agent-made-transcript-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.md)
+
+Agent 生成：
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-zh-CN.svg)](CERTIFICATION.md)
+
+公开对话：
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-transcript-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-transcript-zh-CN.svg)](CERTIFICATION.md)
+
+旧版与兼容：
+
+[![纯血 vibe coding](badges/pure-vibe-coding.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-dark.svg)](CERTIFICATION.md)
+
+可复制的 Markdown 片段见 [BADGE.md](BADGE.md)。
 
 ## 快速使用
 
@@ -45,7 +69,7 @@
 然后在 README 里加入徽章：
 
 ```md
-[![纯血 vibe coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding.svg)](https://github.com/pinatsu/PureVibeCoding)
+[![纯血 vibe coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](https://github.com/pinatsu/PureVibeCoding)
 ```
 
 也可以使用 Shields 风格徽章：
@@ -104,7 +128,7 @@ jobs:
 
 当前版本是一个轻量的公开规范和徽章工具。它采用自我声明模式：任何项目都可以使用徽章，但社区可以根据公开对话记录审计其声明是否成立。
 
-本仓库已经包含根目录 [.pure-vibe-coding.json](.pure-vibe-coding.json) 作为自身认证声明。GitHub 仓库是 [pinatsu/PureVibeCoding](https://github.com/pinatsu/PureVibeCoding)，但本地工作树尚未完成首次 commit 和 push，所以声明仍使用 `publication_status: "unpublished"` 与 `commit: "working-tree-before-first-commit"`。首次提交并推送后，应把 `claim.commit` 改成可审计的 commit、分支或 release，并把 `publication_status` 切换为 `published`。
+本仓库已经包含根目录 [.pure-vibe-coding.json](.pure-vibe-coding.json) 作为自身认证声明。GitHub 仓库是 [pinatsu/PureVibeCoding](https://github.com/pinatsu/PureVibeCoding)，认证声明发布到 `main` 分支。
 
 ## 灵感
 

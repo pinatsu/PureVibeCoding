@@ -26,4 +26,4 @@ This directory contains public agent conversation exports for this repository.
 
 To certify this repository itself, publish every conversation that affected the claimed scope, then add a root `.pure-vibe-coding.json` pointing at those transcripts.
 
-This repository now includes a root `.pure-vibe-coding.json` attestation pointing to `https://github.com/pinatsu/PureVibeCoding` in unpublished mode. After the first commit and push, update `claim.commit` to the audited commit, branch, or release and switch `publication_status` to `published`.
+This repository includes a root `.pure-vibe-coding.json` attestation pointing to `https://github.com/pinatsu/PureVibeCoding`, published against the `main` branch.

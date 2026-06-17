@@ -2,11 +2,35 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![Pure Vibe Coding](badges/pure-vibe-coding.svg)](CERTIFICATION.md)
+[![Pure Vibe Coding](badges/pure-vibe-coding-agent-made-transcript-en.svg)](CERTIFICATION.md)
 
 A provenance badge for open-source projects: it declares that a project was created **100% through agent conversations**, without hand-written "classical programming" and without hidden manual cleanup of AI-generated code.
 
 This is not a code quality, security, or license compliance certification. It certifies one thing only: whether the project's production process is pure vibe coding, and whether the agent conversations are public and auditable.
+
+## Badge Gallery
+
+Full attestation:
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-agent-made-transcript-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.md)
+
+Agent-made:
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-zh-CN.svg)](CERTIFICATION.md)
+
+Public transcript:
+
+[![Pure Vibe Coding](badges/pure-vibe-coding-transcript-en.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-transcript-zh-CN.svg)](CERTIFICATION.md)
+
+Legacy and compatibility:
+
+[![Pure Vibe Coding](badges/pure-vibe-coding.svg)](CERTIFICATION.md)
+[![Pure Vibe Coding](badges/pure-vibe-coding-dark.svg)](CERTIFICATION.md)
+
+See [BADGE.md](BADGE.md) for copyable Markdown snippets.
 
 ## Quick Start
 
@@ -45,7 +69,7 @@ Add an attestation file to your project:
 Then add the badge to your README:
 
 ```md
-[![Pure Vibe Coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding.svg)](https://github.com/pinatsu/PureVibeCoding)
+[![Pure Vibe Coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding-agent-made-transcript-en.svg)](https://github.com/pinatsu/PureVibeCoding)
 ```
 
 You can also use a Shields-style badge:
@@ -104,7 +128,7 @@ jobs:
 
 This project is currently a lightweight public specification and badge tool. It uses a self-attestation model: any project may use the badge, and the community can audit the claim through the public conversation records.
 
-This repository includes a root [.pure-vibe-coding.json](.pure-vibe-coding.json) as its own attestation. The GitHub repository is [pinatsu/PureVibeCoding](https://github.com/pinatsu/PureVibeCoding), but the local worktree has not been committed and pushed yet, so the attestation still uses `publication_status: "unpublished"` and `commit: "working-tree-before-first-commit"`. After the first commit and push, update `claim.commit` to the audited commit, branch, or release and switch `publication_status` to `published`.
+This repository includes a root [.pure-vibe-coding.json](.pure-vibe-coding.json) as its own attestation. The GitHub repository is [pinatsu/PureVibeCoding](https://github.com/pinatsu/PureVibeCoding), and the attestation is published against the `main` branch.
 
 ## Inspiration
 

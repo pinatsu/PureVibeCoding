@@ -3,8 +3,8 @@
   "version": 1,
   "claim": {
     "repository": "https://github.com/pinatsu/PureVibeCoding",
-    "publication_status": "unpublished",
-    "commit": "working-tree-before-first-commit",
+    "publication_status": "published",
+    "commit": "main",
     "scope": "entire-repository"
   },
   "attestation": {

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="222" height="20" role="img" aria-label="纯血 vibe coding: 公开对话记录">
+  <title>纯血 vibe coding: 公开对话记录</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#fff" stop-opacity=".18"/>
+    <stop offset="1" stop-opacity=".32"/>
+  </linearGradient>
+  <clipPath id="r">
+    <rect width="222" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="102" height="20" fill="#14151a"/>
+    <rect x="102" width="120" height="20" fill="#20c997"/>
+    <rect width="222" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="11">
+    <text x="51" y="15" fill="#010101" fill-opacity=".35">纯血 vibe coding</text>
+    <text x="51" y="14">纯血 vibe coding</text>
+    <text x="162" y="15" fill="#010101" fill-opacity=".35">公开对话记录</text>
+    <text x="162" y="14">公开对话记录</text>
+  </g>
+</svg>

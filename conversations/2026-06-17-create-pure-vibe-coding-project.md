@@ -773,6 +773,269 @@ origin  https://github.com/pinatsu/PureVibeCoding.git (fetch)
 origin  https://github.com/pinatsu/PureVibeCoding.git (push)
 ```
 
+## Turn 7
+
+### User
+
+```text
+1. 增加徽章展示。
+2. 增加专门的英文，中文徽章
+```
+
+### Agent
+
+```text
+我会给 `BADGE.md` 和 README 增加一个徽章展示区，同时新增独立的英文徽章和中文徽章 SVG。先确认现有 SVG 尺寸和文案，再按同一风格扩展。
+```
+
+### Tool Actions
+
+The agent read the existing badge SVG files, `BADGE.md`, and git status.
+
+### Agent
+
+```text
+我会新增两个 SVG：一个全英文文案，一个中文文案；然后把英文 README 顶部改用英文徽章、中文 README 顶部改用中文徽章，并在 `BADGE.md` 里做一个可视化展示和复制代码。
+```
+
+### File Changes
+
+The agent updated:
+
+- `badges/pure-vibe-coding-en.svg`: added a dedicated English badge.
+- `badges/pure-vibe-coding-zh-CN.svg`: added a dedicated Chinese badge.
+- `README.md`: switched the top badge to the English badge and added a badge gallery.
+- `README.zh-CN.md`: switched the top badge to the Chinese badge and added a badge gallery.
+- `BADGE.md`: replaced the simple usage page with a badge gallery table and copyable Markdown snippets.
+
+### Verification
+
+The root attestation passed validation:
+
+```powershell
+& "C:\Users\pinat\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" scripts/validate-attestation.mjs .pure-vibe-coding.json
+```
+
+Output:
+
+```text
+Pure Vibe Coding attestation passed
+file: C:\Users\pinat\Documents\纯血vibe coding\.pure-vibe-coding.json
+scope: entire-repository
+conversations: 1
+validator: scripts\validate-attestation.mjs
+```
+
+The agent also confirmed the badge directory contains four SVG files:
+
+```text
+pure-vibe-coding-dark.svg
+pure-vibe-coding-en.svg
+pure-vibe-coding-zh-CN.svg
+pure-vibe-coding.svg
+```
+
+## Turn 8
+
+### User
+
+```text
+把徽章展示放在前面
+```
+
+### Agent
+
+```text
+我会把 README 英文/中文里的徽章展示区上移到开头介绍之后，同时把 BADGE.md 的展示也保持在最前面。改完会更新 transcript 并跑认证校验。
+```
+
+### Tool Actions
+
+The agent inspected the section order and current README contents:
+
+```powershell
+cmd /c findstr /n /c:"Badge Gallery" /c:"Quick Start" /c:"徽章展示" /c:"快速使用" README.md README.zh-CN.md BADGE.md
+Get-Content -LiteralPath README.md
+Get-Content -LiteralPath README.zh-CN.md
+```
+
+### Agent
+
+```text
+我会把展示区移动到简介段落后、Quick Start 前，这样用户打开页面第一眼就能看到全部徽章样式。
+```
+
+### File Changes
+
+The agent moved:
+
+- `README.md`: `Badge Gallery` now appears before `Quick Start`.
+- `README.zh-CN.md`: `徽章展示` now appears before `快速使用`.
+
+## Turn 9
+
+### User
+
+```text
+public transcript 为什么只有中英混合版的
+```
+
+### Agent
+
+```text
+对，这个是我刚才扩展时留下的一个不一致：`public transcript` 版还停留在旧的中英混合样式。更合理的是也提供英文专用和中文专用的公开对话徽章。我直接补上。
+```
+
+### Tool Actions
+
+The agent read the current badge usage page and README badge galleries:
+
+```powershell
+Get-Content -LiteralPath BADGE.md
+Get-Content -LiteralPath README.md
+Get-Content -LiteralPath README.zh-CN.md
+```
+
+### Agent
+
+```text
+我会新增两枚 `public transcript` 专用徽章：英文写 `public transcript`，中文写 `公开对话记录`，再把 README 和 BADGE.md 的展示表补齐。
+```
+
+### File Changes
+
+The agent updated:
+
+- `badges/pure-vibe-coding-transcript-en.svg`: added an English public transcript badge.
+- `badges/pure-vibe-coding-transcript-zh-CN.svg`: added a Chinese public transcript badge.
+- `README.md`: added both public transcript badges to the badge gallery.
+- `README.zh-CN.md`: added both public transcript badges to the badge gallery.
+- `BADGE.md`: added both new badges and copyable Markdown snippets, and renamed the old dark badge row to legacy mixed public transcript.
+
+## Turn 10
+
+### User
+
+```text
+再增加“pure vibe coding | 100% agent-made | public transcript”这个种样式的
+```
+
+### Agent
+
+```text
+我来加一枚三段式英文徽章，文案就是 `pure vibe coding | 100% agent-made | public transcript`，并把它放到 README/BADGE 展示区里更靠前的位置。
+```
+
+### File Changes
+
+The agent updated:
+
+- `badges/pure-vibe-coding-agent-made-transcript-en.svg`: added a three-part English badge.
+- `README.md`: added the new badge at the start of the badge gallery.
+- `README.zh-CN.md`: added the new badge at the start of the badge gallery.
+- `BADGE.md`: added an `English full` row and a recommended snippet for the full English badge.
+- `conversations/2026-06-17-create-pure-vibe-coding-project.md`: appended this turn.
+
+## Turn 11
+
+### User
+
+```text
+增加中文版的，同时整理展示区的徽章顺序，整洁一点
+```
+
+### Agent
+
+```text
+我会补一枚中文版三段式徽章，并把展示区按“完整认证徽章、生成声明、公开对话、旧版/兼容”来排序，README 和 BADGE.md 都一起整理。
+```
+
+### Agent
+
+```text
+我会把三段式中文命名为 `pure-vibe-coding-agent-made-transcript-zh-CN.svg`，并把展示区分成四组：完整认证、agent 生成、公开对话、兼容/旧版。这样用户不会在一串徽章里猜哪个该用。
+```
+
+### File Changes
+
+The agent updated:
+
+- `badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg`: added the Chinese three-part badge.
+- `README.md`: changed the top badge to the full English badge and grouped the badge gallery.
+- `README.zh-CN.md`: changed the top badge to the full Chinese badge and grouped the badge gallery.
+- `BADGE.md`: reorganized badge documentation into full attestation, agent-made, public transcript, and legacy/compatibility sections.
+- `conversations/2026-06-17-create-pure-vibe-coding-project.md`: appended this turn.
+
+## Turn 12
+
+### User
+
+```text
+提交并push到github
+```
+
+### Agent
+
+```text
+我会把认证声明从 `unpublished` 切到 `published/main`，把这次“提交并 push”的操作追加到 transcript，然后一起提交并推送。这样远端 `main` 上的认证状态会和实际发布状态一致。
+```
+
+### Tool Actions
+
+The agent checked the worktree, attestation file, and transcript:
+
+```powershell
+cmd /c git status --short --branch
+Get-Content -LiteralPath .pure-vibe-coding.json
+Get-Content -LiteralPath conversations/2026-06-17-create-pure-vibe-coding-project.md -Tail 80
+```
+
+The agent found pending badge and documentation changes, then updated the project attestation from unpublished working-tree mode to `publication_status: "published"` with `commit: "main"`.
+
+### File Changes
+
+The agent updated:
+
+- `.pure-vibe-coding.json`: switched the project attestation to published mode against `main`.
+- `README.md`: updated project status text to say the attestation is published against `main`.
+- `README.zh-CN.md`: updated the same project status note in Chinese.
+- `conversations/README.md`: updated the attestation note.
+- `conversations/2026-06-17-create-pure-vibe-coding-project.md`: appended this turn.
+
+### Verification
+
+The agent ran:
+
+```powershell
+& "C:\Users\pinat\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" scripts/validate-attestation.mjs .pure-vibe-coding.json
+```
+
+Output:
+
+```text
+Pure Vibe Coding attestation passed
+file: C:\Users\pinat\Documents\纯血vibe coding\.pure-vibe-coding.json
+scope: entire-repository
+conversations: 1
+validator: scripts\validate-attestation.mjs
+```
+
+The example attestation was also validated successfully:
+
+```powershell
+& "C:\Users\pinat\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" scripts/validate-attestation.mjs examples/attestation/.pure-vibe-coding.json
+```
+
+Output:
+
+```text
+Pure Vibe Coding attestation passed
+file: C:\Users\pinat\Documents\纯血vibe coding\examples\attestation\.pure-vibe-coding.json
+scope: entire-repository
+conversations: 1
+validator: scripts\validate-attestation.mjs
+```
+
 The agent also verified the example attestation:
 
 ```powershell
