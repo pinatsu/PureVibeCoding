@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/schema/pure-vibe-coding.schema.json",
+  "title": "Pure Vibe Coding Attestation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "claim",
+    "attestation",
+    "agent_conversations",
+    "maintainers"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "commit",
+        "scope"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "oneOf": [
+            {
+              "pattern": "^https://github\\.com/[^/]+/[^/]+/?$"
+            },
+            {
+              "const": "unpublished"
+            }
+          ]
+        },
+        "commit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication_status": {
+          "type": "string",
+          "enum": [
+            "published",
+            "unpublished"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "repository"
+            ],
+            "properties": {
+              "repository": {
+                "const": "unpublished"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "publication_status"
+            ],
+            "properties": {
+              "publication_status": {
+                "const": "unpublished"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "publication_status"
+            ],
+            "properties": {
+              "publication_status": {
+                "const": "published"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "repository": {
+                "pattern": "^https://github\\.com/[^/]+/[^/]+/?$"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "no_manual_coding",
+        "all_agent_conversations_public"
+      ],
+      "properties": {
+        "no_manual_coding": {
+          "const": true
+        },
+        "all_agent_conversations_public": {
+          "const": true
+        },
+        "redactions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "reason",
+              "scope"
+            ],
+            "properties": {
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "agent_conversations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "path"
+            ]
+          },
+          {
+            "required": [
+              "url"
+            ]
+          }
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "tool": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "maintainers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contact": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pure-vibe-coding",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A badge and attestation format for 100% agent-generated open-source projects.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate:example": "node scripts/validate-attestation.mjs examples/attestation/.pure-vibe-coding.json"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

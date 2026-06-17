@@ -1,0 +1,30 @@
+name: Certification audit
+description: Ask the community to audit a pure vibe coding claim.
+title: "[audit] "
+labels:
+  - certification
+  - audit
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: Link to the project using the badge.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: attestation
+    attributes:
+      label: Attestation file
+      description: Link to .pure-vibe-coding.json.
+      placeholder: https://github.com/owner/repo/blob/main/.pure-vibe-coding.json
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: What should reviewers look at?
+    validations:
+      required: false

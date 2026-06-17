@@ -1,0 +1,32 @@
+{
+  "$schema": "schema/pure-vibe-coding.schema.json",
+  "version": 1,
+  "claim": {
+    "repository": "https://github.com/pinatsu/PureVibeCoding",
+    "publication_status": "unpublished",
+    "commit": "working-tree-before-first-commit",
+    "scope": "entire-repository"
+  },
+  "attestation": {
+    "no_manual_coding": true,
+    "all_agent_conversations_public": true,
+    "redactions": [
+      {
+        "reason": "Hidden platform instructions, developer instructions, and internal reasoning are not user-visible agent conversation records.",
+        "scope": "conversations/2026-06-17-create-pure-vibe-coding-project.md"
+      }
+    ]
+  },
+  "agent_conversations": [
+    {
+      "title": "Create pure vibe coding project and certification",
+      "path": "conversations/2026-06-17-create-pure-vibe-coding-project.md",
+      "tool": "Codex"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Repository maintainer"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/pure-vibe-coding.schema.json",
+  "version": 1,
+  "claim": {
+    "repository": "https://github.com/example/agent-made-project",
+    "commit": "main",
+    "scope": "entire-repository"
+  },
+  "attestation": {
+    "no_manual_coding": true,
+    "all_agent_conversations_public": true,
+    "redactions": [
+      {
+        "reason": "Removed API tokens from command output.",
+        "scope": "conversations/2026-06-17-initial-build.md"
+      }
+    ]
+  },
+  "agent_conversations": [
+    {
+      "title": "Initial build",
+      "path": "conversations/2026-06-17-initial-build.md",
+      "tool": "Codex"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Example Maintainer",
+      "contact": "https://github.com/example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+name: Pure Vibe Coding Attestation
+description: Validate a pure vibe coding attestation file.
+inputs:
+  file:
+    description: Path to the attestation JSON file.
+    required: false
+    default: .pure-vibe-coding.json
+runs:
+  using: composite
+  steps:
+    - name: Validate attestation
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/scripts/validate-attestation.mjs" "${{ inputs.file }}"
