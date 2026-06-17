@@ -8,6 +8,7 @@ This directory contains public agent conversation exports for this repository.
 
 - [2026-06-17-create-pure-vibe-coding-project.md](2026-06-17-create-pure-vibe-coding-project.md)
 - [2026-06-17-create-pure-vibe-coding-skill.md](2026-06-17-create-pure-vibe-coding-skill.md)
+- [2026-06-17-expand-contributing-guide.md](2026-06-17-expand-contributing-guide.md)
 
 ## Export Update Prompt
 

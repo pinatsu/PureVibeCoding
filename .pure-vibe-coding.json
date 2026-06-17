@@ -18,6 +18,10 @@
       {
         "reason": "Hidden platform instructions, developer instructions, and internal reasoning are not user-visible agent conversation records.",
         "scope": "conversations/2026-06-17-create-pure-vibe-coding-skill.md"
+      },
+      {
+        "reason": "Hidden platform instructions, developer instructions, and internal reasoning are not user-visible agent conversation records.",
+        "scope": "conversations/2026-06-17-expand-contributing-guide.md"
       }
     ]
   },
@@ -30,6 +34,11 @@
     {
       "title": "Discuss and create Pure Vibe Coding Codex skill",
       "path": "conversations/2026-06-17-create-pure-vibe-coding-skill.md",
+      "tool": "Codex"
+    },
+    {
+      "title": "Expand contribution guide with project onboarding",
+      "path": "conversations/2026-06-17-expand-contributing-guide.md",
       "tool": "Codex"
     }
   ],
