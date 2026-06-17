@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.zh-CN.md)
 
 一个给开源项目使用的 provenance 徽章：声明该项目是 **100% 通过和 agent 对话生成** 的，没有“古法手工编程”，也没有人类偷偷手改 AI 产物来收拾残局。
 
@@ -12,25 +12,25 @@
 
 完整认证：
 
-[![Pure Vibe Coding](badges/pure-vibe-coding-agent-made-transcript-en.svg)](CERTIFICATION.md)
-[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.md)
+[![Pure Vibe Coding](badges/pure-vibe-coding-agent-made-transcript-en.svg)](CERTIFICATION.zh-CN.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](CERTIFICATION.zh-CN.md)
 
 Agent 生成：
 
-[![Pure Vibe Coding](badges/pure-vibe-coding-en.svg)](CERTIFICATION.md)
-[![纯血 vibe coding](badges/pure-vibe-coding-zh-CN.svg)](CERTIFICATION.md)
+[![Pure Vibe Coding](badges/pure-vibe-coding-en.svg)](CERTIFICATION.zh-CN.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-zh-CN.svg)](CERTIFICATION.zh-CN.md)
 
 公开对话：
 
-[![Pure Vibe Coding](badges/pure-vibe-coding-transcript-en.svg)](CERTIFICATION.md)
-[![纯血 vibe coding](badges/pure-vibe-coding-transcript-zh-CN.svg)](CERTIFICATION.md)
+[![Pure Vibe Coding](badges/pure-vibe-coding-transcript-en.svg)](CERTIFICATION.zh-CN.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-transcript-zh-CN.svg)](CERTIFICATION.zh-CN.md)
 
 旧版与兼容：
 
-[![纯血 vibe coding](badges/pure-vibe-coding.svg)](CERTIFICATION.md)
-[![纯血 vibe coding](badges/pure-vibe-coding-dark.svg)](CERTIFICATION.md)
+[![纯血 vibe coding](badges/pure-vibe-coding.svg)](CERTIFICATION.zh-CN.md)
+[![纯血 vibe coding](badges/pure-vibe-coding-dark.svg)](CERTIFICATION.zh-CN.md)
 
-可复制的 Markdown 片段见 [BADGE.md](BADGE.md)。
+可复制的 Markdown 片段见 [BADGE.zh-CN.md](BADGE.zh-CN.md)。
 
 ## 快速使用
 
@@ -87,11 +87,11 @@ Agent 生成：
 3. 所有用于生成、修改、修复项目的 agent 对话必须公开。可以脱敏密钥、隐私信息和第三方机密，但脱敏范围需要说明。
 4. 项目仓库必须包含 `.pure-vibe-coding.json`，列出认证范围、对应提交、公开对话记录和维护者声明。
 
-更完整的规则见 [CERTIFICATION.md](CERTIFICATION.md)。
+更完整的规则见 [CERTIFICATION.zh-CN.md](CERTIFICATION.zh-CN.md)。
 
 ## 导出对话
 
-每次通过 agent 修改项目后，都应更新公开对话记录。可复制 [conversations/README.md](conversations/README.md) 里的提示词，让 agent 导出或刷新 transcript。
+每次通过 agent 修改项目后，都应更新公开对话记录。可复制 [conversations/README.zh-CN.md](conversations/README.zh-CN.md) 里的提示词，让 agent 导出或刷新 transcript。
 
 ## 校验
 
@@ -134,6 +134,6 @@ jobs:
 
 灵感来自 [@tison1096 的这条 X 帖](https://x.com/tison1096/status/2066569080988123398)：对“明明手工修订项目，却声称全是 AI 做的”这种现象的吐槽。
 
-## License
+## 许可证
 
 MIT

@@ -242,6 +242,75 @@ conversations: 1
 validator: scripts\validate-attestation.mjs
 ```
 
+## Turn 13
+
+### User
+
+```text
+项目文档全面支持英文/中文，所有文档主要入口设置为英文。
+```
+
+### Agent
+
+```text
+我会把默认文档入口统一成英文文件名，并为主要 Markdown 文档补齐 `*.zh-CN.md` 中文版本；中文 README 会链接到中文版本，英文 README 保持链接到英文入口。先快速盘点当前文档结构。
+```
+
+### Tool Actions
+
+The agent listed Markdown documents and inspected current documentation:
+
+```powershell
+cmd /c dir /s /b *.md
+Get-Content -LiteralPath CERTIFICATION.md
+Get-Content -LiteralPath CONTRIBUTING.md
+cmd /c git status --short --branch
+```
+
+### Agent
+
+```text
+当前最明显的问题是 `CERTIFICATION.md` 还是中文主入口，而 `BADGE.md` 只有英文。我要把主入口文档都改成英文，并补中文对应文件：`CERTIFICATION.zh-CN.md`、`BADGE.zh-CN.md`、`CONTRIBUTING.zh-CN.md`，同时让 README 链接各自语言版本。
+```
+
+### File Changes
+
+The agent updated:
+
+- `CERTIFICATION.md`: converted the default certification rules document to English.
+- `CERTIFICATION.zh-CN.md`: added the Simplified Chinese certification rules.
+- `BADGE.zh-CN.md`: added the Simplified Chinese badge usage document.
+- `CONTRIBUTING.md`: added language switch links.
+- `CONTRIBUTING.zh-CN.md`: added the Simplified Chinese contribution guide.
+- `conversations/README.md`: converted the default conversation index to English.
+- `conversations/README.zh-CN.md`: added the Simplified Chinese conversation index and export prompt.
+- `examples/README.md`: kept the default examples document in English and switched the example badge to the English full badge.
+- `examples/README.zh-CN.md`: added the Simplified Chinese examples document.
+- `README.zh-CN.md`: redirected documentation links to the Chinese documents and translated the License heading.
+- `.github/PULL_REQUEST_TEMPLATE.md`: kept the default pull request template in English and linked the Chinese template.
+- `.github/PULL_REQUEST_TEMPLATE.zh-CN.md`: added the Simplified Chinese pull request template.
+- `.github/ISSUE_TEMPLATE/certification-zh-CN.yml`: added a Simplified Chinese certification audit issue template.
+
+### Verification
+
+The agent ran:
+
+```powershell
+& "C:\Users\pinat\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" scripts/validate-attestation.mjs .pure-vibe-coding.json
+```
+
+Output:
+
+```text
+Pure Vibe Coding attestation passed
+file: C:\Users\pinat\Documents\纯血vibe coding\.pure-vibe-coding.json
+scope: entire-repository
+conversations: 1
+validator: scripts\validate-attestation.mjs
+```
+
+The agent also listed `*.zh-CN.md` documents and confirmed language switch links in the main Markdown documents.
+
 The agent also read `README.md` and `scripts/validate-attestation.mjs` to inspect their content.
 
 ### Agent

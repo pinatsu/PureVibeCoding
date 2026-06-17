@@ -1,0 +1,30 @@
+name: 认证审计
+description: 请求社区审计一个纯血 vibe coding 声明。
+title: "[audit] "
+labels:
+  - certification
+  - audit
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: 仓库
+      description: 使用该徽章的项目链接。
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: attestation
+    attributes:
+      label: 认证声明文件
+      description: 指向 .pure-vibe-coding.json 的链接。
+      placeholder: https://github.com/owner/repo/blob/main/.pure-vibe-coding.json
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 希望审计者重点查看什么？
+    validations:
+      required: false

@@ -1,5 +1,7 @@
 # Examples
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 ## Attestation
 
 See [attestation/.pure-vibe-coding.json](attestation/.pure-vibe-coding.json) for a minimal certification declaration.
@@ -13,5 +15,5 @@ node scripts/validate-attestation.mjs examples/attestation/.pure-vibe-coding.jso
 ## README badge
 
 ```md
-[![纯血 vibe coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding.svg)](https://github.com/pinatsu/PureVibeCoding)
+[![Pure Vibe Coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding-agent-made-transcript-en.svg)](https://github.com/pinatsu/PureVibeCoding)
 ```

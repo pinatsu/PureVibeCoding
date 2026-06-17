@@ -1,5 +1,7 @@
 ## Summary
 
+English template. Chinese version: [PULL_REQUEST_TEMPLATE.zh-CN.md](PULL_REQUEST_TEMPLATE.zh-CN.md)
+
 ## Agent conversation links
 
 - 
