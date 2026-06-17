@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/schema/pure-vibe-coding.schema.json",
+  "version": 1,
+  "claim": {
+    "repository": "unpublished",
+    "publication_status": "unpublished",
+    "commit": "working-tree-before-first-commit",
+    "scope": "entire-repository"
+  },
+  "attestation": {
+    "no_manual_coding": true,
+    "all_agent_conversations_public": true
+  },
+  "agent_conversations": [
+    {
+      "title": "Initial implementation",
+      "path": "conversations/YYYY-MM-DD-initial-implementation.md",
+      "tool": "Codex"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Repository maintainer"
+    }
+  ]
+}

@@ -34,7 +34,29 @@ See [BADGE.md](BADGE.md) for copyable Markdown snippets.
 
 ## Quick Start
 
-Add an attestation file to your project:
+Pure Vibe Coding is meant to be used through agents. The recommended path is to give your agent the bundled Codex skill, then let it initialize, validate, and maintain the attestation records for you.
+
+For Codex, copy this repository's skill into your local skills directory:
+
+```sh
+cp -R skills/pure-vibe-coding ~/.codex/skills/pure-vibe-coding
+```
+
+Then ask your agent:
+
+```text
+Use $pure-vibe-coding to add Pure Vibe Coding attestation to this repository.
+```
+
+The skill helps the agent:
+
+- create or update `.pure-vibe-coding.json`;
+- create and index public conversation transcripts;
+- add the README badge;
+- add GitHub Action validation;
+- audit and repair missing provenance records after future agent work.
+
+The underlying attestation file looks like this:
 
 ```json
 {
@@ -66,7 +88,7 @@ Add an attestation file to your project:
 }
 ```
 
-Then add the badge to your README:
+The agent should also add the badge to your README:
 
 ```md
 [![Pure Vibe Coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding-agent-made-transcript-en.svg)](https://github.com/pinatsu/PureVibeCoding)

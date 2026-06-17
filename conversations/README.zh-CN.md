@@ -7,6 +7,7 @@
 ## 对话记录
 
 - [2026-06-17-create-pure-vibe-coding-project.md](2026-06-17-create-pure-vibe-coding-project.md)
+- [2026-06-17-create-pure-vibe-coding-skill.md](2026-06-17-create-pure-vibe-coding-skill.md)
 
 ## 导出更新提示词
 

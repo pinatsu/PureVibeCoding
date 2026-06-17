@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pure Vibe Coding"
+  short_description: "Maintain agent-made provenance attestations"
+  default_prompt: "Use $pure-vibe-coding to initialize, validate, or update a Pure Vibe Coding attestation."

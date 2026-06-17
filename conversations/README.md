@@ -7,6 +7,7 @@ This directory contains public agent conversation exports for this repository.
 ## Transcripts
 
 - [2026-06-17-create-pure-vibe-coding-project.md](2026-06-17-create-pure-vibe-coding-project.md)
+- [2026-06-17-create-pure-vibe-coding-skill.md](2026-06-17-create-pure-vibe-coding-skill.md)
 
 ## Export Update Prompt
 

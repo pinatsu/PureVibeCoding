@@ -34,7 +34,29 @@ Agent 生成：
 
 ## 快速使用
 
-在你的项目里加入认证声明：
+Pure Vibe Coding 本来就应该通过 agent 使用。推荐路径是先把本仓库自带的 Codex skill 交给 agent，然后让 agent 帮你初始化、校验和维护认证记录。
+
+在 Codex 中，可以把本仓库的 skill 复制到本地 skills 目录：
+
+```sh
+cp -R skills/pure-vibe-coding ~/.codex/skills/pure-vibe-coding
+```
+
+然后对 agent 说：
+
+```text
+Use $pure-vibe-coding to add Pure Vibe Coding attestation to this repository.
+```
+
+这个 skill 会帮助 agent：
+
+- 创建或更新 `.pure-vibe-coding.json`；
+- 创建并索引公开对话记录；
+- 添加 README 徽章；
+- 添加 GitHub Action 校验；
+- 在后续 agent 修改后审计和修复缺失的 provenance 记录。
+
+底层认证声明文件长这样：
 
 ```json
 {
@@ -66,7 +88,7 @@ Agent 生成：
 }
 ```
 
-然后在 README 里加入徽章：
+agent 还应该在 README 里加入徽章：
 
 ```md
 [![纯血 vibe coding](https://raw.githubusercontent.com/pinatsu/PureVibeCoding/main/badges/pure-vibe-coding-agent-made-transcript-zh-CN.svg)](https://github.com/pinatsu/PureVibeCoding)
